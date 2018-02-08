@@ -98,7 +98,7 @@ public class Internal_Adshel extends PlayIQ_Internal
 				CreateOrder.click();
 							
 				WebElement Adv = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='MainContent_ContractHeaderUserControl_txtAdvertiserName']")));
-				Adv.sendKeys("WAR");
+				Adv.sendKeys("WARNER");
 				Thread.sleep(1000);
 				Adv.sendKeys(Keys.ARROW_DOWN);
 				Adv.sendKeys(Keys.ARROW_DOWN);

@@ -46,7 +46,7 @@ public class Internal_Storm extends PlayIQ_Internal
 		createOrder2.click();
 		
 		WebElement Adv = wait.until(ExpectedConditions.elementToBeClickable(By.id("MainContent_AvailabilityUserControl1_ContractHeaderUserControl_txtAdvertiserName")));
-		Adv.sendKeys("WAR");
+		Adv.sendKeys("WARNER");
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='autoadvert']/span/span/div/span/div[2]/p")));
 		Adv.sendKeys(Keys.ARROW_DOWN);
 		Adv.sendKeys(Keys.ARROW_DOWN);
@@ -85,7 +85,7 @@ public class Internal_Storm extends PlayIQ_Internal
 		driver.navigate().to("https://uat.playiq.co.uk/storm/bookings/CreateNewBooking");
 		
 		WebElement Adv = wait.until(ExpectedConditions.elementToBeClickable(By.id("MainContent_BookingsUserControl1_ContractHeaderUserControl_txtAdvertiserName")));
-		Adv.sendKeys("WAR");
+		Adv.sendKeys("WARNER");
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='autoadvert']/span/span/div/span/div[2]/p")));
 		Adv.sendKeys(Keys.ARROW_DOWN);
 		Adv.sendKeys(Keys.ARROW_DOWN);
@@ -184,7 +184,7 @@ public class Internal_Storm extends PlayIQ_Internal
 		apply.click();
 		
 		WebElement Adv = wait.until(ExpectedConditions.elementToBeClickable(By.id("txtAdvertiserName")));
-		Adv.sendKeys("WAR");
+		Adv.sendKeys("WARNER");
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='autoadvert']/span/span/div/span/div[2]/p")));
 		Adv.sendKeys(Keys.ARROW_DOWN);		
 		Adv.sendKeys(Keys.ENTER);
