@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="PlayIQ_Suite" verbose="10">
+	<listeners>
+        <listener class-name="Helper.ExtentReporterNG" />
+    </listeners>
+	<test name="Test">
+		<classes>
+			<class name="Test.External_Storm"/>			
+			<class name="Test.Internal_Storm"/>
+			<class name="Test.Internal_Adshel"/>
+			<class name="Test.Internal_Wrap"/>
+			<class name="Test.Internal_ASDA"/>
+			<class name="Test.Internal_Sainsbury"/>
+			<class name="Test.Internal_IrelandTesco"/>							
+			<class name="Test.Internal_Navigate"/>
+			<class name="Test.Internal_Final"/>								
+		</classes>
+	</test>
+</suite>
