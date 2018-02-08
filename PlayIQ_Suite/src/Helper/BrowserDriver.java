@@ -43,7 +43,7 @@ public class BrowserDriver extends TestListenerAdapter
 	@BeforeSuite
 	public static void setUp() 
 	{
-		//@SuppressWarnings("resource")//		
+		//@SuppressWarnings("resource")		
 		/*AS ONLY IE Browser is supported today disable asking for browser
 		Scanner reader = new Scanner(System.in);  // Reading from System.in
 		System.out.println("Please enter the browser to run the Automation on ");
