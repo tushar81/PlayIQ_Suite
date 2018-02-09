@@ -145,7 +145,7 @@ public class PlayIQ_Internal extends BrowserDriver
 		return OrderCreated.getText();
 	}
 	
-	public String submitPlayOrder() throws InterruptedException, AWTException
+	public String submitPlayOrder(String Date) throws InterruptedException, AWTException
 	{
 		WebElement NewBooking = wait.until(ExpectedConditions.elementToBeClickable(By.id("ShowCreateBooking")));
 		NewBooking.click();
@@ -157,7 +157,7 @@ public class PlayIQ_Internal extends BrowserDriver
 		WebElement BookingDate = wait.until(ExpectedConditions.elementToBeClickable(By.id("MainContent_SupermarketBookByPlays1_BookByPlaysFilterScreenUserControl1_txtSearchDates")));
 		BookingDate.click();
 		BookingDate.clear();
-		BookingDate.sendKeys(Constants.oneDay);
+		BookingDate.sendKeys(Date);
 		
 		WebElement NoOfPlay = wait.until(ExpectedConditions.elementToBeClickable(By.id("MainContent_SupermarketBookByPlays1_BookByPlaysFilterScreenUserControl1_txtNumberOfPlays")));
 		NoOfPlay.click();

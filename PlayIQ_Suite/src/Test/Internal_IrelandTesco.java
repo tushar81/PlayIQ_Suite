@@ -32,7 +32,7 @@ public class Internal_IrelandTesco extends PlayIQ_Internal
 	{
 		changeProduct("IrelandTesco");					
 		driver.navigate().to("https://uat.playiq.co.uk/IrelandTesco/bookings/BookByPlays");
-		String orderDetails = submitPlayOrder();
+		String orderDetails = submitPlayOrder(Constants.oneWeek);
 		Assert.assertFalse(orderDetails.isEmpty());
 		System.out.println(orderDetails);
 		
