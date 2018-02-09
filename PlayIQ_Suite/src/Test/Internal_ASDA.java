@@ -19,7 +19,7 @@ public class Internal_ASDA extends PlayIQ_Internal
 				{
 					changeProduct("ASDA");					
 					driver.navigate().to("https://uat.playiq.co.uk/asda/bookings/BookByLocation");
-					String orderDetails = submitOrder();
+					String orderDetails = submitOrder(Constants.oneWeek);
 					Constants.asdaContract=orderDetails.substring(7,13); 
 					Reporter.log("ASDA contract created - "+orderDetails);					 
 				}

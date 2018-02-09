@@ -87,7 +87,7 @@ public class PlayIQ_Internal extends BrowserDriver
 		Thread.sleep(1500); 
 	}	
 
-	public String submitOrder() throws InterruptedException, AWTException
+	public String submitOrder(String Date) throws InterruptedException, AWTException
 	{
 		//Used to create ASDA and Sainsbury and Tesco Ireland COntracts
 		WebElement store = wait.until(ExpectedConditions.elementToBeClickable(By.partialLinkText("Stores")));
@@ -96,6 +96,11 @@ public class PlayIQ_Internal extends BrowserDriver
 		Select List = new Select(driver.findElement(By.id("ddlSavedStoreList")));
 		List.selectByVisibleText("Autobot List");
 		driver.findElement(By.xpath("//*[@id='LocationPanel']/div/div/div/div[6]/div/div[3]/i")).click();
+		
+		WebElement BookingDate =  wait.until(ExpectedConditions.elementToBeClickable(By.id("MainContent_BookingsUserControl1_txtChargeDates")));
+		BookingDate.click();
+		BookingDate.clear();
+		BookingDate.sendKeys(Date);
 		
 		WebElement ViewAvail =  wait.until(ExpectedConditions.elementToBeClickable(By.id("MainContent_BookingsUserControl1_btnSearchAvail")));
 		ViewAvail.click();
@@ -202,11 +207,12 @@ public class PlayIQ_Internal extends BrowserDriver
 		pleaseWait();
 		
 		WebElement dates = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='orderlines']/tbody/tr[3]/td[2]")));
-		dates.click();
+		dates.click(); 
 		
 		for(int i=5;i<6;i=i+1)
 		{
-			driver.findElement(By.xpath("//*[@id='orderlines']/tbody/tr["+i+"]/td[10]/i")).click();
+			driver.findElement(By.xpath("//*[@id='orderlines']/tbody/tr["+i+"]/td[11]/i")).click();
+			
 			submitModal();					
 		}
 		

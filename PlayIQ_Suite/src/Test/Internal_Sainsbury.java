@@ -18,7 +18,7 @@ public class Internal_Sainsbury extends PlayIQ_Internal
 					changeProduct("SAINSBURYS");
 					
 					driver.navigate().to("https://uat.playiq.co.uk/sainsburys/bookings/BookByLocation");
-					String orderDetails = submitOrder();
+					String orderDetails = submitOrder(Constants.oneWeek);
 					Constants.sainsburyContract=orderDetails.substring(7,13); 
 					Reporter.log("SAINSBURY contract created - "+orderDetails);
 				}

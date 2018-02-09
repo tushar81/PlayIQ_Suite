@@ -28,7 +28,7 @@ public class Internal_Final extends PlayIQ_Internal
 		Reporter.log("Days removed from Asda Contract - "+Constants.asdaContract);
 	}
 	
-	@Test (priority=22,enabled=false)
+	@Test (priority=22)
 	public void Internal_RemoveDaySainsbury() throws Exception 
 	{
 		//Remove Day Asda

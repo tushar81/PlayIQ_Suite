@@ -179,7 +179,7 @@ public class Internal_Storm extends PlayIQ_Internal
 		
 		WebElement  dates = wait.until(ExpectedConditions.elementToBeClickable(By.id("txtBookingDates")));
 		dates.clear();
-		dates.sendKeys("06/08/2018 - 12/08/2018");
+		dates.sendKeys(Constants.oneWeek);
 		WebElement  apply = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[3]/div[3]/div/button[1]")));
 		apply.click();
 		

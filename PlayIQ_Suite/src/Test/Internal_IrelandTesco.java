@@ -20,7 +20,7 @@ public class Internal_IrelandTesco extends PlayIQ_Internal
 	{
 		changeProduct("IrelandTesco");					
 		driver.navigate().to("https://uat.playiq.co.uk/IrelandTesco/bookings/BookByLocation");
-		String orderDetails = submitOrder();
+		String orderDetails = submitOrder(Constants.oneWeek);
 		Constants.irelandTesco=orderDetails.substring(7,13);
 		Assert.assertFalse(orderDetails.isEmpty());
 		Reporter.log("IrelandTesco contract created - "+orderDetails);
