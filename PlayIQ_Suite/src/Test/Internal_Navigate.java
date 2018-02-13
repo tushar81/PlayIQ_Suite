@@ -22,6 +22,8 @@ public class Internal_Navigate extends PlayIQ_Internal
 		Assert.assertTrue(checkPageTitle("https://uat.playiq.co.uk/sainsburys/sainsburyshome", "Sainsbury's Live"));
 		Assert.assertTrue(checkPageTitle("https://uat.playiq.co.uk/asda/asdahome", "Asda Live"));
 		Assert.assertTrue(checkPageTitle("https://uat.playiq.co.uk/adshel/adshelhome", "Adshel Live"));
+		Assert.assertTrue(checkPageTitle("https://uat.playiq.co.uk/NI/NIhome", "Adshel Live Northern Ireland"));
+		Assert.assertTrue(checkPageTitle("https://uat.playiq.co.uk/IrelandTesco/IrelandTescohome", "Ireland Tesco Live"));
 		driver.navigate().to("https://uat.playiq.co.uk/changeproduct");
 		Assert.assertTrue(checkPageTitle("Select a Product"));		
 	}
@@ -43,3 +45,4 @@ public class Internal_Navigate extends PlayIQ_Internal
 			  }
 		}
 	}
+
